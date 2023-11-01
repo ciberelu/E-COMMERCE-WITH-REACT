@@ -32,7 +32,7 @@ export function Filtros () {
                     max={1000}
                     onChange={handleRangoChange}
                 />
-                <span>$.{filtros.precioMinimo}</span>
+                <span>Q. {filtros.precioMinimo}</span>
             </div>
             <div>
                 <label htmlFor="categoria">categoria</label>
