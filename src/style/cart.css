@@ -1,0 +1,86 @@
+.cart-button {
+    align-items: center;
+    background: #09f;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    position: fixed;
+    right: 8px;
+    top: 10px;
+    transition: all .5s ease;
+    width: 32px;
+    z-index: 9999;
+  }
+  
+  .cart-button:hover {
+    scale: 1.2;
+  }
+
+  .cart {
+    background: #000;
+    display: none;
+    padding: 32px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    z-index: 1;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .scrollCart{
+    overflow: auto;
+  }
+
+  .cart img {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+  
+  .cart li {
+    width: 200px;
+
+    border-bottom: 1px solid #444;
+    padding-bottom: 16px;
+  }
+  
+  .cart footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cart footer button {
+    padding: 8px;
+  }
+  
+  .cart-button ~ input:checked ~ .cart {
+    display: block;
+  }
+
+  /* Personalizar la barra de desplazamiento vertical */
+.scrollCart::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra de desplazamiento */
+}
+
+.scrollCart::-webkit-scrollbar-track {
+  background: #89151506; /* Color del fondo de la pista de la barra de desplazamiento */
+  
+}
+
+.scrollCart::-webkit-scrollbar-thumb {
+  background: #5d0404; /* Color del "pulgón" de la barra de desplazamiento */
+  border-radius: 6px; /* Bordes redondeados del "pulgón" */
+  
+  margin: 2px;
+  
+}
+
+.scrollCart::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Cambiar el color del "pulgón" al pasar el cursor */
+}
