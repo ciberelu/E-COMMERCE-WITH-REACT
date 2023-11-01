@@ -9,6 +9,14 @@ function actualizarLocalStorage (estado){
     
 }
 
+export const CART_OPTIONS = {
+    addTocart: "añadirAlCarrito",
+    limpiarCarrito: "limpiarCarrito",
+    quitarProductoDelCarrito: "quitarProductoDelCarrito"
+
+
+}
+
 // declarar el reduce
 //el reducer recibe por parametro el estado y la accion, y devuelve ( retorna ) el nuevo estado
 

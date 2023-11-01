@@ -1,4 +1,4 @@
-import { estadoInicial, reducer } from "../reducers/cartReducer";
+import { estadoInicial, reducer, CART_OPTIONS } from "../reducers/cartReducer";
 
 
 
@@ -19,19 +19,19 @@ export function CartProvider ({ children }){
     const [ estado, dispatch ] = useReducer( reducer, estadoInicial)
 
     const añadirAlCarrito = (producto) => dispatch({
-        type: 'añadirAlCarrito',
+        type: CART_OPTIONS.addTocart,
         payload: producto
     })  
 
     
 
     const quitarProductoDelCarrito = (producto) => dispatch({
-        type: 'quitarProductoDelCarrito',
+        type: CART_OPTIONS.quitarProductoDelCarrito,
         payload: producto
     })
 
     const limpiarCarrito = () => dispatch({
-        type: 'limpiarCarrito'
+        type: CART_OPTIONS.limpiarCarrito
     })
     return (
         <CartCotext.Provider value={{cart: estado, añadirAlCarrito, limpiarCarrito, quitarProductoDelCarrito}}>
